@@ -1,0 +1,63 @@
+---
+import Container from "./Container.astro"
+const cantoniImageSizeW = "563";
+const cantoniImageSizeH = "965" ;
+
+---
+<Container>
+<div class="relative flex flex-col-reverse items-center md:flex-row" id="hero">
+    <div class="row items-start pb-8 md:w-6/12 md:pb-20">
+        <div class="text-left space-y-3">
+            <h1 class="text-7xl font-bold leading-none md:text-8xl">TORNEO DEI CANTONI</h1>
+            <p class="mt-6 mb-8  text-xl font-normal leading-7 sm:mb-12">La sfida sportiva tra gli 8 cantoni di Centallo</p>
+            
+            <div class="relative flex flex-col items-start md:flex-row">
+                <div class="row items-start py-5 md:pr-5 md:w-10/12 md:py-5">
+                    <div class="text-center md:text-left space-y-3 bg-lime">
+                        <h2 class="text-4xl font-medium leading-none sm:text-5xl">19-20-21 luglio</h2>
+                    </div>
+                    <div class="flex items-center py-5 md:w-10/12 md:py-10">
+                        <p class="text-xl font-normal leading-7 text-center md:text-left">📍 Movi centallo</p>
+                    </div>
+                </div>
+                
+            </div>
+            
+               
+            
+        </div>
+    </div>
+    <div class="flex items-center py-3 md:w-6/12 md:pb-20 md:pt-0">
+        <img src="/Hero.png" width="100%" alt="Hero"/>
+    </div>
+</div>
+
+<div class="hidden flex-row items-center">
+    <div class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6">
+        <div class="p-3  grayscale transition duration-200 hover:grayscale-0">
+            <img src="./cantoni/aia.png" class="h-12 w-auto mx-auto" loading="lazy"  width={cantoniImageSizeW}   height={cantoniImageSizeH} />
+        </div>
+        <div class="p-4 grayscale transition duration-200 hover:grayscale-0">
+            <img src="./cantoni/canton-levante.png" class="h-12 w-auto mx-auto" loading="lazy"  width={cantoniImageSizeW} height={cantoniImageSizeH} />
+        </div>
+        <div class="p-4 flex grayscale transition duration-200 hover:grayscale-0">
+            <img src="./cantoni/canton-ponente.png" class="h-9 w-auto m-auto" loading="lazy"  width={cantoniImageSizeW} height={cantoniImageSizeH} />
+        </div>
+        <div class="p-4 flex grayscale transition duration-200 hover:grayscale-0">
+            <img src="./cantoni/centro.png" class="h-9 w-auto m-auto" loading="lazy"  width="" height="" />
+        </div>
+        <div class="p-4 grayscale transition duration-200 hover:grayscale-0">
+            <img src="./cantoni/oltre-grana.png" class="h-12 w-auto mx-auto" loading="lazy"  width="" height="" />
+        </div>
+        <div class="p-4 flex grayscale transition duration-200 hover:grayscale-0">
+            <img src="./cantoni/roata-chiusani.png" class="h-8 w-auto m-auto" loading="lazy" width="" height="" />
+        </div>
+        <div class="p-4 grayscale transition duration-200 hover:grayscale-0">
+            <img src="./cantoni/san-biagio.png" class="h-12 w-auto mx-auto" loading="lazy"  width="" height="" />
+        </div>
+        <div class="p-4 grayscale transition duration-200 hover:grayscale-0">
+            <img src="./cantoni/scuderia.png" class="h-12 w-auto mx-auto" loading="lazy"  width="" height="" />
+        </div>
+    </div>
+</div>
+</Container>

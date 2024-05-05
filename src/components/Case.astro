@@ -1,0 +1,81 @@
+---
+import Container from "./Container.astro"
+---
+<Container>
+<div class="relative flex flex-col items-center md:flex-row" id="projects">
+    <div class="row items-center py-5 md:pr-40 md:w-8/12 md:py-10">
+        <div class="text-center md:text-left space-y-3 bg-lime">
+            <h2 class="text-4xl font-medium leading-none sm:text-6xl">Regolamento</h2>
+        </div>
+    </div>
+    
+</div>
+
+<div class="w-full p-12 bg-zinc-900 rounded-[45px] justify-start items-start gap-16 inline-flex text-white">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-2 divide-x-0 md:divide-x divide-y md:divide-y-0">
+        <div class="flex-col items-start gap-5 inline-flex px-2 md:px-6 py-6 md:py-2">
+            <div class="justify-start items-center gap-[15px] inline-flex">
+                <div class="text-lime text-2xl font-normal leading-7">Chi può partecipare?</div>
+            </div>
+            <div class="w-full text-lg font-normal">
+                <ul class="list-disc" >
+                    <li> Chiunque sia nato prima del <b>2007</b> (compresi)</li>
+                    <li> <b class="text-lime">30 persone</b> massimo per squadra</li>    
+                    <li> Sono ammesse <b>2 persone</b> per cantone residenti al di fuori di Centallo</li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="flex-col items-start gap-5 inline-flex px-2 md:px-6 py-6 md:py-2">
+            <div class="justify-start items-center gap-[15px] inline-flex">
+                <div class="text-lime text-2xl font-normal leading-7">Montepremi</div>
+            </div>
+            <div class="w-full text-lg font-normal">
+                
+                I primi tre cantoni nella classifica finale avranno diritto ai seguenti premi:
+                <ul class="list-disc" >
+                    <li> <b class="text-lime">€1000</b> al cantone primo classificato</li>
+                    <li> <b class="text-lime">€700</b> al secondo</li>    
+                    <li> <b class="text-lime">€500</b> al terzo</li> 
+                    
+                </ul>
+            </div>
+            
+        </div>
+        <div class="flex-col items-start gap-5 inline-flex px-2 md:px-6 py-6 md:py-2">
+           
+            <div class="w-full text-lg font-normal"> 
+                <div class="justify-start items-center gap-[15px] inline-flex">
+                    <div class="text-lime text-2xl font-normal leading-7">Se voglio solo tifare?</div>
+                </div>
+                <div class="w-full text-lg font-normal">
+                L’accesso ai terreni di gioco sarà libero a tutti!
+                La presenza di gruppi di tifoserie al seguito della squadra è
+                fortemente caldeggiata!
+                
+                (🍔/🍻 Durante le tre giornate sarà a disposizione un servizio di cibo e
+                bevande)</div>
+            
+        </div>
+    </div>
+    
+    <!-- <div class="w-[186px] h-[0px] origin-top-left rotate-90 border border-white"></div> -->
+    <!-- <div class="w-[186px] h-[0px] origin-top-left rotate-90 border border-white"></div> -->
+    
+    
+</div>
+
+<div class="hidden flex items-center py-5 md:w-7/12 md:py-10">
+    <p class="text-xl font-normal leading-7 text-center md:text-right">
+        Durante il corso del torneo verrà aggiornata la classifica generale in base agli esiti di ogni singola gara della fase a gironi
+        La posizione all’interno di ogni girone consentirà di guadagnare più o meno punti
+        <ul class="list-disk">
+        
+        <li> Il posizionamento dopo la conclusione di semifinali e finali consentirà di guadagnare punti bonus</li>
+        <li> Per il tiro alla fune saranno assegnati punti soltanto ai primi quattro classificati</li>
+        <li>Per la staffettona conterà il piazzamento al termine della gara.</li>
+    </ul>
+        
+        </p>
+</div>
+</Container>
