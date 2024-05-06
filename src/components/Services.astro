@@ -8,19 +8,24 @@ import servicesData from './Data/services.json';
 
 <Container>
 
-<div class="flex-row items-center my-6 p-14 bg-zinc-100 rounded-[45px]">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div class="justify-start items-center gap-[275px] flex">
-            <div class="flex-col justify-start items-start gap-[26px] inline-flex text-black">
-                <div class="text-3xl font-medium">Scopri a quale cantone appartieni</div>
-                <div class="text-lg font-normal">Cerca dove abiti e scopri a quale degli 8 cantoni di Centallo appartieni</div>
-    
-
-
+    <div class="flex-row items-center my-6 p-14 bg-zinc-100 rounded-[45px]">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="justify-start items-start gap-[275px] flex col-span-2 md:col-span-1">
+                <div class="flex-col justify-start items-start gap-[26px] inline-flex text-black">
+                    <div class="text-3xl font-medium">Scopri a quale cantone appartieni</div>
+                    <div class="text-lg font-normal">Cerca dove abiti e scopri a quale degli 8 cantoni di Centallo appartieni</div>
+        
+                    
+                </div>
+            </div>
+            <div class="col-span-1 md:col-span-1">
+                <iframe src="https://www.google.com/maps/d/embed?mid=1jq1X5sbZGnMd9IAtsKtBllyM82LBztQ&ehbc=2E312F" width="640" height="480"></iframe>
             </div>
         </div>
+    </div>
+    
        
-            <iframe src="https://www.google.com/maps/d/embed?mid=1jq1X5sbZGnMd9IAtsKtBllyM82LBztQ&ehbc=2E312F" width="640" height="480"></iframe>
+           
        
     </div>
 </div>
