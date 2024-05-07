@@ -49,8 +49,9 @@ async function getAreaNameForCoordinate(coordinate, topoJSONData) {
 
 export async function cantoneFinder(address) {
     try {
+        address += ', Centallo';
         const geoapifyResponse = await createGeoapifyRequest(address);
-        console.log(geoapifyResponse);
+        
         // Example usage:
         const coordinate = [geoapifyResponse.results[0].lon, geoapifyResponse.results[0].lat];
 
@@ -63,10 +64,10 @@ export async function cantoneFinder(address) {
 
         // Find the area name for the coordinate
         const areaName = await getAreaNameForCoordinate(coordinate, topoJSONData);
-        console.log('Area name:', areaName);
+        return areaName;
     } catch (error) {
         console.error('Error:', error);
     }
 }
 
-cantoneFinder('Via pearda 44');
+
