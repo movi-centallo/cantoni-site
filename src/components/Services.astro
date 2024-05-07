@@ -30,8 +30,8 @@ import servicesData from './Data/services.json';
 
                         </form>
                         
-                        <script type="module">
-                            import { cantoneFinder } from '../../public/scripts/cantone-finder.mjs';
+                        <script type="module" is:inline>
+                            import { cantoneFinder } from '/scripts/cantone-finder.mjs';
                         
                             document.getElementById('submitButton').addEventListener('click', async function(event) {
                                 const address = document.getElementById('subject').value;

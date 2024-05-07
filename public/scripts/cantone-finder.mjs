@@ -1,5 +1,7 @@
 import * as turf from '@turf/turf';
 import * as topojson from 'topojson-client';
+import cantonis from '/cantoni/cantoni.topojson?url';
+
 
 async function createGeoapifyRequest(address) {
     try {
@@ -56,7 +58,7 @@ export async function cantoneFinder(address) {
         const coordinate = [geoapifyResponse.results[0].lon, geoapifyResponse.results[0].lat];
 
         // Fetch the TopoJSON file
-        const topoJSONResponse = await fetch("http://localhost:4321/public/scripts/cantoni.topojson");
+        const topoJSONResponse = cantonis; 
         if (!topoJSONResponse.ok) {
             throw new Error(`Failed to fetch TopoJSON file: ${topoJSONResponse.statusText}`);
         }
