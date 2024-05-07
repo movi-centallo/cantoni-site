@@ -30,20 +30,10 @@ import servicesData from './Data/services.json';
 
                         </form>
                         
-                        <script type="module" is:inline>
-                            import { cantoneFinder } from '/scripts/cantone-finder.mjs';
-                        
-                            document.getElementById('submitButton').addEventListener('click', async function(event) {
-                                const address = document.getElementById('subject').value;
-                                const cantone = await cantoneFinder(address); // Assuming findCantone returns a promise
-                                // Manually submit the form
-                                console.log(cantone); 
-                                // Display the response in the response container
-                                document.getElementById('responseContainer').textContent = cantone;
-                                // You can add further handling after the function call if needed
-                        
-                                
-                            });
+                        <script type="module" src="./src/scripts/cantone-finder.mjs">
+                            
+                            
+                            
                         </script>
                         
 

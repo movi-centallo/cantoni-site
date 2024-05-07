@@ -1,6 +1,6 @@
 import * as turf from '@turf/turf';
 import * as topojson from 'topojson-client';
-import cantonis from '/cantoni/cantoni.topojson?url';
+
 
 
 async function createGeoapifyRequest(address) {
@@ -51,6 +51,8 @@ async function getAreaNameForCoordinate(coordinate, topoJSONData) {
 
 export async function cantoneFinder(address) {
     try {
+
+        console.log('Script started'); 
         address += ', Centallo';
         const geoapifyResponse = await createGeoapifyRequest(address);
         
@@ -58,7 +60,7 @@ export async function cantoneFinder(address) {
         const coordinate = [geoapifyResponse.results[0].lon, geoapifyResponse.results[0].lat];
 
         // Fetch the TopoJSON file
-        const topoJSONResponse = cantonis; 
+        const topoJSONResponse = await fetch('../public/cantoni/cantoni.topojson?url'); 
         if (!topoJSONResponse.ok) {
             throw new Error(`Failed to fetch TopoJSON file: ${topoJSONResponse.statusText}`);
         }
@@ -71,5 +73,16 @@ export async function cantoneFinder(address) {
         console.error('Error:', error);
     }
 }
+
+
+    document.getElementById('submitButton').addEventListener('click', async function(event) {
+    const address = document.getElementById('subject').value;
+    const cantone = await cantoneFinder(address); // Assuming findCantone returns a promise
+    // Manually submit the form
+    console.log(cantone); 
+    // Display the response in the response container
+    document.getElementById('responseContainer').textContent = cantone;
+    // You can add further handling after the function call if needed
+});
 
 
