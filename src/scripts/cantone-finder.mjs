@@ -60,7 +60,7 @@ export async function cantoneFinder(address) {
         const coordinate = [geoapifyResponse.results[0].lon, geoapifyResponse.results[0].lat];
 
         // Fetch the TopoJSON file
-        const topoJSONResponse = await fetch('../public/cantoni/cantoni.topojson?url'); 
+        const topoJSONResponse = await fetch('/cantoni/cantoni.topojson?url'); 
         if (!topoJSONResponse.ok) {
             throw new Error(`Failed to fetch TopoJSON file: ${topoJSONResponse.statusText}`);
         }
