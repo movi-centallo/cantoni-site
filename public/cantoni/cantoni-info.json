@@ -1,34 +1,38 @@
 {
     "cantoni": {
       "centro": {
-        "img_src": "public/cantoni/centro.png",
+        "name": "Centro",
+        "img_src": "cantoni/centro.png",
         "whatsapp_url": "https://whatsapp.example.com/centro_chat",
         "id": "c"
       },
       "ponente": {
         "name": "Canton Ponente",
-        "img_src": "/path/to/ponente_image.jpg",
+        "img_src": "cantoni/canton-ponente.png",
         "whatsapp_url": "https://whatsapp.example.com/ponente_chat",
         "id": "p"
       },
       "levante": {
         "name": "Canton Levante",
-        "img_src": "/path/to/levante_image.jpg",
+        "img_src": "cantoni/canton-levante.png",
         "whatsapp_url": "https://whatsapp.example.com/levante_chat",
         "id": "l"
       },
       "oltre_grana": {
-        "img_src": "/path/to/oltre_grana_image.jpg",
+        "name": "Oltre Grana", 
+        "img_src": "cantoni/oltre-grana.png",
         "whatsapp_url": "https://whatsapp.example.com/oltre_grana_chat",
         "id": "g"
       },
       "san_biagio": {
-        "img_src": "/path/to/san_biagio_image.jpg",
+        "name":"San Biagio",
+        "img_src": "cantoni/san-biagio.png",
         "whatsapp_url": "https://whatsapp.example.com/san_biagio_chat",
         "id": "b"
       },
       "roata": {
-        "img_src": "/path/to/roata_image.jpg",
+        "name": "Roata Chiusani",
+        "img_src": "cantoni/roata-chiusani.png",
         "whatsapp_url": "https://whatsapp.example.com/roata_chat",
         "id": "r"
       },
@@ -39,9 +43,21 @@
         "id": "s"
       },
       "aia": {
-        "img_src": "/path/to/aia_image.jpg",
+        "name": "Aia Grande", 
+        "img_src": "cantoni/aia.png",
         "whatsapp_url": "https://whatsapp.example.com/aia_chat",
         "id": "a"
+      }
+    }, 
+    "error":{
+      "not_found": {
+        "name": "Non ho trovato nulla 😅...", 
+        "img_src": "cantoni/not_found.png"
+      },
+      "broken": {
+        "name": "Qualcosa è andato storto 🤯",
+        "img_src": "cantoni/broken.png"        
+
       }
     }
   }

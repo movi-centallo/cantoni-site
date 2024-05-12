@@ -33,12 +33,14 @@ import servicesData from './Data/services.json';
                         <script>
                             
                             import { cantoneFinder } from "../scripts/cantone-finder.mjs";
-                            const submit = document.getElementById('submitButton'); 
+                            const submit = document.getElementById('searchForm'); 
                             const subject = document.getElementById('subject') as HTMLInputElement; 
                             const response = document.getElementById('responseContainer'); 
                             const imageCantone = document.getElementById('img-output') as HTMLInputElement;
                             if(submit && subject && response && imageCantone){
-                                submit.addEventListener('click', async function(event) {
+                                submit.addEventListener('submit', async function(event) {
+                                
+                                event.preventDefault(); 
                                 const address = subject.value;
                                 const cantone = await cantoneFinder(address); // Assuming findCantone returns a promise
                                 // Manually submit the form
