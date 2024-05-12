@@ -34,7 +34,7 @@
       },
       "scuderia": {
         "name": "Scuderia",
-        "img_src": "public/cantoni/scuderia.png",
+        "img_src": "cantoni/scuderia.png",
         "whatsapp_url": "https://whatsapp.example.com/scuderia_chat",
         "id": "s"
       },
