@@ -36,7 +36,7 @@ import servicesData from './Data/services.json';
                             const submit = document.getElementById('submitButton'); 
                             const subject = document.getElementById('subject') as HTMLInputElement; 
                             const response = document.getElementById('responseContainer'); 
-                            const imageCantone = document.getElementById('img-output');
+                            const imageCantone = document.getElementById('img-output') as HTMLInputElement;
                             if(submit && subject && response && imageCantone){
                                 submit.addEventListener('click', async function(event) {
                                 const address = subject.value;
