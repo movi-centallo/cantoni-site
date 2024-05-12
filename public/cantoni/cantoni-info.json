@@ -1,0 +1,48 @@
+{
+    "cantoni": {
+      "centro": {
+        "img_src": "public/cantoni/centro.png",
+        "whatsapp_url": "https://whatsapp.example.com/centro_chat",
+        "id": "c"
+      },
+      "ponente": {
+        "name": "Canton Ponente",
+        "img_src": "/path/to/ponente_image.jpg",
+        "whatsapp_url": "https://whatsapp.example.com/ponente_chat",
+        "id": "p"
+      },
+      "levante": {
+        "name": "Canton Levante",
+        "img_src": "/path/to/levante_image.jpg",
+        "whatsapp_url": "https://whatsapp.example.com/levante_chat",
+        "id": "l"
+      },
+      "oltre_grana": {
+        "img_src": "/path/to/oltre_grana_image.jpg",
+        "whatsapp_url": "https://whatsapp.example.com/oltre_grana_chat",
+        "id": "g"
+      },
+      "san_biagio": {
+        "img_src": "/path/to/san_biagio_image.jpg",
+        "whatsapp_url": "https://whatsapp.example.com/san_biagio_chat",
+        "id": "b"
+      },
+      "roata": {
+        "img_src": "/path/to/roata_image.jpg",
+        "whatsapp_url": "https://whatsapp.example.com/roata_chat",
+        "id": "r"
+      },
+      "scuderia": {
+        "name": "Scuderia",
+        "img_src": "public/cantoni/scuderia.png",
+        "whatsapp_url": "https://whatsapp.example.com/scuderia_chat",
+        "id": "s"
+      },
+      "aia": {
+        "img_src": "/path/to/aia_image.jpg",
+        "whatsapp_url": "https://whatsapp.example.com/aia_chat",
+        "id": "a"
+      }
+    }
+  }
+  

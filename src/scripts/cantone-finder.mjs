@@ -1,6 +1,8 @@
 import * as turf from '@turf/turf';
 import * as topojson from 'topojson-client';
-
+import data from '../../public/cantoni/cantoni.json';
+import cantoniInfo from '../../public/cantoni/cantoni-info.json';
+const debug = false; 
 
 
 async function createGeoapifyRequest(address) {
@@ -53,36 +55,48 @@ export async function cantoneFinder(address) {
     try {
 
         console.log('Script started'); 
-        address += ', Centallo';
-        const geoapifyResponse = await createGeoapifyRequest(address);
         
+        var geoapifyResponse = await createGeoapifyRequest(address);
+        console.log(geoapifyResponse); 
+       
+        const response = geoapifyResponse.results.filter(e => {
+            //Filter rules
+            return e.city == 'Centallo' && e.result_type == 'building'; 
+        })
+
         // Example usage:
         const coordinate = [geoapifyResponse.results[0].lon, geoapifyResponse.results[0].lat];
-
+        console.log(data);
         // Fetch the TopoJSON file
-        const topoJSONResponse = await fetch('/cantoni/cantoni.topojson?url'); 
-        if (!topoJSONResponse.ok) {
+        //const topoJSONResponse = fetch('/cantoni/cantoni.topojson?url').then((response) => response.json()).then((json) => console.log(json));
+        
+        if (!data) {
             throw new Error(`Failed to fetch TopoJSON file: ${topoJSONResponse.statusText}`);
         }
-        const topoJSONData = await topoJSONResponse.json();
+        
+        
+
 
         // Find the area name for the coordinate
-        const areaName = await getAreaNameForCoordinate(coordinate, topoJSONData);
-        return areaName;
+        const areaName = await getAreaNameForCoordinate(coordinate, data);
+        const cantoneInfo = addInfo(areaName); 
+        console.log(cantoneInfo);
+        return cantoneInfo;
     } catch (error) {
         console.error('Error:', error);
     }
 }
 
 
-    document.getElementById('submitButton').addEventListener('click', async function(event) {
-    const address = document.getElementById('subject').value;
-    const cantone = await cantoneFinder(address); // Assuming findCantone returns a promise
-    // Manually submit the form
-    console.log(cantone); 
-    // Display the response in the response container
-    document.getElementById('responseContainer').textContent = cantone;
-    // You can add further handling after the function call if needed
-});
+function addInfo(response){
+    for (const cantoneName in cantoniInfo.cantoni) {
+        const cantone = cantoniInfo.cantoni[cantoneName];
+        if (cantone.name && cantone.name === response) {
+          return cantone;
+        }
+      }
+      return null; // If no match is found
+}
+
 
 
